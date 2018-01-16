@@ -1,13 +1,23 @@
-﻿<div class="jumbotron">
-    @*<video width="480" height="320" controls="controls" autoplay="autoplay">
-        
-    </video>*@
+﻿@{ 
+    ViewBag.Title = "Tugsuu";
+}
 
-    <video id="video" width="320" height="240" controls="controls" autoplay="autoplay">
-        <source src="http://localhost:26007/api/Camera/fromvideo/?videoName=Saikhan" />
+<div class="jumbotron">
+    <video id="videoclip" controls="controls" poster="images/cover.jpg" title="Video title">
+        <source id='mp4Source' src="http://localhost:26007/api/camera/fromvideo/?videoName=mov" type="video/mp4" />
     </video>
 </div>
-@section script
-{
 
-}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+        var videocontainer = document.getElementById('videoclip');
+        var source = document.getElementById('mp4Source');
+
+        videocontainer.onended = function () {
+            source.src = "http://localhost:26007/api/camera/fromvideo/?videoName=Saikhan";
+            videocontainer.load();
+            videocontainer.play();
+        }
+    });
+</script>

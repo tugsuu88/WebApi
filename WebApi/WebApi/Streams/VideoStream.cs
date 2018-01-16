@@ -22,7 +22,8 @@ namespace WebApi.Streams
             {
                 var buffer = new byte[65536];
 
-                using (var video = File.Open(@"D:\Projects\RaspberryDashboard\API\WebApi\WebApi\TestData\" + videoName + @".mp4", FileMode.Open, FileAccess.Read))
+                //using (var video = File.Open(@"D:\Projects\RaspberryDashboard\API\WebApi\WebApi\TestData\" + videoName + @".mp4", FileMode.Open, FileAccess.Read))
+                using (var video = File.Open(@"D:\Tugsuu\Projects\WebApi\WebApi\WebApi\TestData\" + videoName + @".mp4", FileMode.Open, FileAccess.Read))
                 {
                     var length = (int)video.Length;
                     var bytesRead = 1;
