@@ -235,13 +235,41 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CameraController.cs" />
+    <Compile Include="Controllers\GetContentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801170220216_InitialModel.cs" />
+    <Compile Include="Migrations\201801170220216_InitialModel.Designer.cs">
+      <DependentUpon>201801170220216_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170443034_InitialModel1.cs" />
+    <Compile Include="Migrations\201801170443034_InitialModel1.Designer.cs">
+      <DependentUpon>201801170443034_InitialModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170446476_InitialModel2.cs" />
+    <Compile Include="Migrations\201801170446476_InitialModel2.Designer.cs">
+      <DependentUpon>201801170446476_InitialModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170449218_InitialModel3.cs" />
+    <Compile Include="Migrations\201801170449218_InitialModel3.Designer.cs">
+      <DependentUpon>201801170449218_InitialModel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170450529_InitialModel4.cs" />
+    <Compile Include="Migrations\201801170450529_InitialModel4.Designer.cs">
+      <DependentUpon>201801170450529_InitialModel4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CBackgroundImage.cs" />
+    <Compile Include="Models\CBase.cs" />
+    <Compile Include="Models\CContent.cs" />
+    <Compile Include="Models\CInformation.cs" />
+    <Compile Include="Models\CTerminal.cs" />
+    <Compile Include="Models\CVideo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -323,6 +351,23 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801170220216_InitialModel.resx">
+      <DependentUpon>201801170220216_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170443034_InitialModel1.resx">
+      <DependentUpon>201801170443034_InitialModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170446476_InitialModel2.resx">
+      <DependentUpon>201801170446476_InitialModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170449218_InitialModel3.resx">
+      <DependentUpon>201801170449218_InitialModel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170450529_InitialModel4.resx">
+      <DependentUpon>201801170450529_InitialModel4.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

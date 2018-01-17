@@ -17,6 +17,11 @@ namespace WebApi
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
+            var setting = config.Formatters.JsonFormatter.SerializerSettings;
+            setting.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            setting.Formatting = Newtonsoft.Json.Formatting.Indented;
+            
+            
             // Web API routes
             config.MapHttpAttributeRoutes();
 

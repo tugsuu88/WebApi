@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 using Microsoft.AspNet.Identity.Owin;
 
 namespace WebApi.Models
@@ -20,6 +21,11 @@ namespace WebApi.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<CTerminal> Terminals { get; set; }
+        public DbSet<CContent> Contents { get; set; }
+        public DbSet<CVideo> Videos { get; set; }
+        public DbSet<CInformation> Informations { get; set; }
+        public DbSet<CBackgroundImage> BackgroundImages { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
